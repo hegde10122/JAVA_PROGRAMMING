@@ -1,0 +1,39 @@
+//Simple line text prinitng program to start with
+
+The above line in the code starts with two back slashes indicating that this line is a comment.
+The java compiler does not read this line and simply rejects it. Comments are a great way to improve
+the readability of the program.
+The two backslash comment is called as a end-of-line comment meaning it terminates at the end of the line consisting of
+//. This type of comment can begin anywhere on the line.
+
+In Java traditional comments begin with /* and end with */. These two symbols are called delimiters.
+The java compiler ignores all the text between the delimiters. The traditional comments are also
+found in high-level languages like C and C++.
+The traditional comments can occupy multiple lines in the java class file.
+
+The third type of comments in Java are called the Javadoc comments. These are delimited by /** and */.
+Javadoc comments help the programmer to embed the program with documentation directly. The javadoc comments are the preferred standards 
+in industry. The javadoc utility program which is a part of the JDK read javadoc comments and uses them to prepare the documentation
+in HTML format. 
+
+Lines 4 and 7 are blank lines which help us to make reading easier. Blank lines, spaces and tabs are collectively called as whitespace.
+White spaces are ignored by the compiler.
+
+public class Welcome - This is the way to declare a class. The keyword "class" introduces the class declaration and is immeditely 
+followed by the name of the class - Welcome. 
+A public class must be placed in a file whose name is the same as that of the class with a .java extension. 
+So our class is named in a file called Welcome.java
+
+A compilation error will occur if the name of the public class and the filename in which it is stored do not match.
+
+
+
+
+
+  
+
+
+
+
+
+
