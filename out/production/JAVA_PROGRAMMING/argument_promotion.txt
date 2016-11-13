@@ -1,0 +1,24 @@
+ARGUMENT PROMOTION
+---------------------
+
+This is the conversion of an argument's value to the type that the method expects to receive in its corresponding
+parameter.
+Example: Math.abs() method accepts an integer although a double argument is expected. The int that is passed is promoted
+to double before the absolute value is calculated. Such conversions may lead to compilation errors if the Java promotion
+rules are not satisfied. These rules specify which conversions are allowed - that is which ones can be performed
+without losing data. Conversion of int to double does not affect its value but conversion of double to int
+truncates the fractional part and hence value is lost. Changing long to short integer may also truncate values.
+
+The promotion rules apply to expression containing values of two or more primitive types and to primitive-type values
+passed as arguments to methods. Each value is promoted to the highest type in the expression. The expression uses a
+temporary copy of each value the types of the original values remains unchanged.
+
+double --- valid promotion --- None
+float --- valid promotion ---> double
+long --- valid promotion ---> float,double
+int --- valid promotion ---> long,float or double
+char --- valid promotion ---> int,long,float,double
+short --- valid promotion ---> int,long,float or double (not char)
+byte --- valid promotion ---> short,int,long,float or double (not char)
+boolean --- valid promotion ---> None (they are not numbers in java)
+

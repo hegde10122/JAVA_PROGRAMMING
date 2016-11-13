@@ -65,6 +65,16 @@ manipulate static variables in the same class directly. To access the class's in
 a static method must use a reference to an object of the class. Instance methods can access all fields (both static and
 instance) and methods of the class.
 
+----------------------------------------------
+VERY VERY IMPORTANT
+
+Static methods relate to a class as a whole, whereas the instance methods are associated with a specific instance (object)
+of the class and may manipulate the instance variables of the object. Many objects of a class each with its own copies
+of the instance variables, may exist at the same time. Suppose a static method where to invoke an instance method directly.
+How would the static method know which object's instance variables to manipulate? What would happen if no objects of the
+class existed at the time the instance method was invoked? Thus java does not allow a static method to directly access
+instance variables and instance methods of the same class.
+
 
 
 
