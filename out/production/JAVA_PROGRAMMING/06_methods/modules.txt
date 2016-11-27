@@ -1,0 +1,81 @@
+The most effective way,arguably, to develop and maintain a large program is to break it into small pieces called modules.
+This divide-and-conquer approach gives us an efficient way to modularise programs.Our programs in java are a
+combination of new methods and classes available in the Java API (Application programming interface) or  other libraries.
+Related classes are grouped into "packages" that can be imported into programs for re-use.
+
+Java has a set of pre-defined libraries that allows us to perform mathematical calculations, string and character manipulations,
+Input/ouput operations, database operations,network operations,file processing,error checking and more.
+Classes and modules allow us to modularise programs by separting the tasks into self-contained units. The statements in the method
+bodies are written only once, are hidden from other methods and can be reused from several other locations in the program.
+
+The other benefit of modularising programs into small and simple chunks is software reusability - using existing classes and
+methods as building blocks to create new programs. This helps to cut down time on developing customised code.
+It is strongly recommended to develop a method that is limited to performing a single,well-defined task and the method name should
+define that task effectively.
+
+A method is invoked by a "method call" and when the called method completes its task it returns the control back to the caller along with
+a possible result.
+
+
+static variables
+-------------------------
+Each class object maintains its own copy of every instance variable of the class. There are variables which
+for each object does not need its own separate copy. Such variables are declared static and are also called class variables.
+When objects of a class containing static variables are created, all the objects of that class share one copy of those variables.
+The combination of static variables and instance variables of a class constitute its fields.
+
+public static void main(String[] args)
+---------------------------------------------
+The main method is also declared static because when you execute the Java virtual machine (JVM) with the java command, the JVM tries to invoke
+the main method of the class that is specified. At this point no objects of the class have been created. Declaring main aa static allows the JVM
+to invoke the main without creating an instance of the class.
+When you execute your application, you specify its class name as an argument to the java command, as in
+java ClassName argument1,argument2
+
+The JVM loads the class psecified by "ClassName" and uses the class name to invoke method main. In the preceding command,ClassName is a command-line
+argument to the JVM that tells it which class to execute. Following the ClassName you can also specify a list of strings (separated by spaces)
+as an argument that the JVM will pass to your application. Such arguments can be used as options (example a filename) to run the application.
+
+----------------------
+
+Variables should be declared as fields only if they are required for use in more than one method of the class or if the
+program should save their values between calls to the class's methods.
+
+-----------------------------------
+
+String concatenation --- assembling strings
+
+Java allows you to assemble String objects into larger strings by using operators + or +=. This is called string concatenation.
+When both the operands of operator + are string objects then the operator + creates a new String object in which the
+characters of the right operand are placed at the end of those in the left operand.
+Example: "Welcome " + "Home" creates the string "Welcome Home"
+
+The trailaing zeros in decimal numbers are shelved when they are concatenated with string. Example a double value 9.34550000
+will become 9.3455 after string concatenation.
+Primitive values used in string concatenation are converted to strings. A boolean value true will be concatenated as "true".
+All objects have a toString() method that returns a string representation of the object.
+
+When an object is concatenated with a string then the object's to string method is implicitly called to obtain the string
+representation of the object. A large string can be broken into smaller pieces and placed on different lines to
+improve their readability.
+-------------------------------------------------
+
+A static method can call other static methods of the same class directly (by using the method name itself) and can
+manipulate static variables in the same class directly. To access the class's instance variables and instance methods,
+a static method must use a reference to an object of the class. Instance methods can access all fields (both static and
+instance) and methods of the class.
+
+----------------------------------------------
+VERY VERY IMPORTANT
+
+Static methods relate to a class as a whole, whereas the instance methods are associated with a specific instance (object)
+of the class and may manipulate the instance variables of the object. Many objects of a class each with its own copies
+of the instance variables, may exist at the same time. Suppose a static method where to invoke an instance method directly.
+How would the static method know which object's instance variables to manipulate? What would happen if no objects of the
+class existed at the time the instance method was invoked? Thus java does not allow a static method to directly access
+instance variables and instance methods of the same class.
+
+
+
+
+

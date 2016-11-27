@@ -1,0 +1,28 @@
+METHOD CALLS AND STACK
+--------------------------------
+
+Stack is a Last-in-first-out (LIFO) data structure used by Java to perform method calls.
+Stack is similar to a pile of letters placed in a post-office. The last letter that arrives goes on the top of the pile.
+The new letter is placed on the top of the pile (pushing on the stack) and the removal of the letter from the pile (called
+popping from the stack) is a LIFO principle.
+
+Thus the last item inserted (or pushed) into the stack becomes the first to be removed (or popped) from the stack.
+------
+
+When a program calls a method, the called method must know how to return to its caller, so the return address of the
+calling method is pushed onto the method-call stack. If a series of method calls occur, then the successive return addresses
+are pushed onto the stack in last-in,first-out order so that each method can return to its caller.
+The method-call stack contains the memory for the local variables (including the method parameters) used in each invocation
+of a method during a program's execution. This data, stored as a portion of the method call-stack is known as a stack frame
+(or activation record) of the method call. When a method call is made, the stack frame for that method call is pushed
+onto the method-call stack. When the method returns to its caller, the stack frame for this method call is popped off the
+stack and those local variables are no longer known to the program.
+
+If a local variable holding a reference to an object is the only variable in the program with a reference to that object,then,
+when the stack frame containing the local variable is popped off the stack, the object can no longer be accessed by the
+program and will be eventually be deleted from memory by the JVM during garbage collection.
+
+A computer's memory being finite, so only a certain amount can be used to store stack frames on the method-call
+stack. If more method calls occur than can have their stack frames stored, an error known as stack overflow occurs.
+
+

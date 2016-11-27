@@ -1,0 +1,74 @@
+INHERITANCE
+----------------
+
+In Inheritance a new class is created by acquiring an existing class's mmebers and possibly embellishing them with new or
+modified capabilities. With inheritance, you can save time during program development by basing new classes on existing
+proven  and debugged high-quality software.
+
+When we create a new class we can designate that the new class must inherit members from an existing class.
+The existing class is called the superclass and the new class is called sublass. Superclass and subclass are also called
+base class and derived class respectively. A subclass can become superclass for future subclasses.
+
+A subclass can add its own fields and methods. Therefore a subclass is more specific than its superclass and represents a
+more specialised group of objects. The subclass exhibits the behaviour of its superclass and can modify those behaviours
+so that they operate appropriately for the subclass. This is why inheritance is also called as specialisation.
+
+The direct superclass is the superclass from which the subclass explicitly inherits. An indirect superclass is any class
+above the direct superclass in the class hierarchy,which defines the inheritance relationships among the classes.
+
+In java the class hierarchy begins with class Object, which every class in java directly or indirectly extends or
+inherits from. Java only supports single inheritance in which each class is derived from exactly one direct superclass.
+
+IS-A RELATIONSHIP
+----------------------
+
+Is-a relationship represents inheritance. In a "IS-A" relationship, an object of a subclass can also be treated as an
+object of its superclass example, a car is a vehicle.
+On the other hand, "HAS-A" represents composition. In a has-a relationship,an object contains as member references
+to other objects - example, a car has a steering wheel. It means a car object has  reference to a ateering wheel object.
+
+New classes can inherit from classes in libraries.
+
+SUPERCLASSES AND SUBCLASSES
+----------------------------------
+An object of one class is also an object of another class as well,many times.
+Example: A CarLoan is a Loan as are HomeImprovementLoans and MortgageLoans. This, in java class CarLoan can be said to inherit
+from class Loan. A Carloan is a specific type of Loan but it is incorrect to claim that every Loan is a type of CarLoan.
+
+Inheritance relationships form treelike hierarchical structures. A superclass exists in a hierarchical relationship
+with its subclasses.
+
+Consider another example of inheritance hierarchy wherein Shape is a superclass with two extended subclasses -
+TwoDimensionalShape and ThreeDimensionalShape. The third level of this hierarchy contains specific types of
+TwoDimensionalShape and ThreeDimensionalShape. Example, Triangle is a TwoDimensionalShape and so too is a Circle.
+Sphere is a ThreeDimensionalShape and also Tetrahedron.
+
+IMPORTANT
+---------------------
+Not every class relationship is an inheritance relationship. Objects of all classes that extend a common superclass can be treated
+as objects of that superclass - such objects have an is-a relationship with the superclass.A subclass can customise methods that
+inherits from its superclass. To do this, the subclass overrides (redefines) the superclass method with an appropriate
+implementation.
+
+A class's public members are accessible wherever the program has a reference to an object of that class or one of its
+subclasses. A class's private members are accessible only within the class itself. Using protected access offers an
+intermediate level of access between public and private. A superclass's protected members can be accessed by members of that
+superclass, by members of its subclasses and by members of other classes in the same package - protected members also have
+package access.
+
+All public and protected superclass members retain their original access modifier when they become members of the subclass -
+public members of the superclass become public members of the subclass, and protected members of the superclass become protected
+members of the subclass. A superclass's private members are not accessible outside the class itself. Rather they are hidden
+from its subclasses and can be accessed only through the public or protected methods inherited from the superclass.
+
+Subclass methods can refer to public and protected members inherited from the superclass by using the member names. When a
+subclass method overrides an inherited superclass method, the superclass version of the method can be accessed from the
+sublcass by preceding the superclass method name with keyword super and a dot(.) separator.
+
+Methods of a subclass cannot directly access private members of their superclass. A subclass can change the state of private
+superclass instance variables only through non-private methods provided in the superclass and inherited by the subclass.
+Declaring private instance variables helps you to test, debug and correctly modify systems. If a subclass could access its
+superclass's private variables, classes that inherit from that subclass could access the instance variables as well. This
+would propagate access in what should be private instance variables,and the benefits of information hiding would be lost.
+
+  
