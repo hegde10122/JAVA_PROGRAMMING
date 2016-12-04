@@ -1,0 +1,7 @@
+We assume that when a class is created, it will be used by programs to create objects of that type.
+Sometimes it is useful to declare classes - called abstract classes - for which you never intend to create objects.
+Because they are used as superclasses in inheritance hierarchies, we refer to them as abstract superclasses. These
+classes cannot be used to instantiate objects because they are incomplete. Subclasses must declare the missing "pieces"
+to become "concrete" classes from which you can instantiate objects.Otherwise these subclasses too will be abstract.
+The purpose of an abstract class is to provide an appropriate superclass from which other classes can inherit
+and thus share a common design.
