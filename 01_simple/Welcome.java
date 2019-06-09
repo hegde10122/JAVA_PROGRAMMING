@@ -1,5 +1,5 @@
 
-//Simple line text prinitng program to start with
+//Simple line text printing program to start with
 public class Welcome {
 
 //main method to execute the main program
